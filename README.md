@@ -1,4 +1,4 @@
-# How to use
+# README
 
 - run bundle install.
 - start server (rails s).
