@@ -1,1 +1,27 @@
-h1 OLA 
+.col-md-12 style="margin-top: 15px"
+  - @stores.each do |store|
+      h4= store.name
+        .col-md-6.text-center
+          = "Dono: #{store.owner}"
+        .col-md-6.text-center
+          = "Saldo: #{store.account_total}"
+        .col-md-12
+          .table
+            table.table.table-striped
+              thead
+                tr
+                  th Tipo
+                  th CPF
+                  th Cartão
+                  th Data
+                  th Valor
+              tbody
+                - store.movements.each do |movement|
+                  tr
+                    td = movement.type
+                    td = movement.cpf
+                    td = movement.card_number
+                    td = movement.performed_in
+                    td = movement.value
+.row
+  = link_to "Incluir", new_movement_path

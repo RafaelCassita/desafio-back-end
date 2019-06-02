@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :reader
-  root to: "reader#index"
+  resources :movement
+  root to: "movement#index"
 end

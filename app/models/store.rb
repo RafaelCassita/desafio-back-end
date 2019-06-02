@@ -1,7 +1,7 @@
 class Movement < ApplicationRecord
   include RandomizeId
   
-  belongs_to :store
+  has_many :movements
 
   enum type: %i[]
   enum kind: %i[entrada saida]
